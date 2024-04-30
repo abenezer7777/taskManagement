@@ -247,6 +247,9 @@ const SidebarStyled = styled.nav<{ collapsed: boolean }>`
       z-index: 1;
       transition: all 0.3s ease-in-out;
     }
+    &:hover {
+      background-color: ${(props) => props.theme.colorGrey1};
+    }
 
     &::before {
       position: absolute;
