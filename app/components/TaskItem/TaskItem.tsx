@@ -6,7 +6,7 @@ import React from "react";
 import styled from "styled-components";
 import formatDate from "@/app/utils/formatDate";
 import Button from "../Button/Button";
-import { add} from "@/app/utils/icons";
+import { add } from "@/app/utils/icons";
 import Modal from "../Modals/Modal";
 import { z } from "zod";
 
@@ -66,7 +66,7 @@ function TaskItem({ title, description, date, isCompleted, id }: Props) {
   };
   return (
     <TaskItemStyled theme={theme}>
-      <h1 className="">{title}</h1>
+      <h1 className="px-2">{title}</h1>
       <p>{description}</p>
       <p className="date">{formatDate(date)}</p>
       <div className="task-footer">
@@ -143,13 +143,16 @@ function TaskItem({ title, description, date, isCompleted, id }: Props) {
               </div>
               <div className="input-control">
                 <label htmlFor="editDate">Date</label>
-                <input
-                  type="date"
-                  value={editedDate}
-                  onChange={(e) => setEditedDate(e.target.value)}
-                  name="editDate"
-                  id="editDate"
-                />
+                <div>
+                  <input
+                    className=" bg-slate-400"
+                    type="date"
+                    value={editedDate}
+                    onChange={(e) => setEditedDate(e.target.value)}
+                    name="editDate"
+                    id="editDate"
+                  />
+                </div>
                 {errors && errors.date && (
                   <span className="error">{errors.date}</span>
                 )}
@@ -163,7 +166,7 @@ function TaskItem({ title, description, date, isCompleted, id }: Props) {
                   borderRad={"0.8rem"}
                   fw={"500"}
                   fs={"1.2rem"}
-                  background={"rgb(0, 163, 255)"}
+                  background={"#5a55ca"}
                 ></Button>
               </div>
             </EditContent>
@@ -177,11 +180,13 @@ function TaskItem({ title, description, date, isCompleted, id }: Props) {
 const TaskItemStyled = styled.div`
   padding: 1.2rem 1rem;
   border-radius: 1rem;
-  background-color: ${(props) => props.theme.borderColor2};
+  // background-color: ${(props) => props.theme.borderColor2};
+  background-color: #ffffff;
   box-shadow: ${(props) => props.theme.shadow7};
   border: 2px solid ${(props) => props.theme.borderColor2};
   height: 16rem;
   display: flex;
+  // color: white;
   flex-direction: column;
   gap: 0.5rem;
   .date {
@@ -190,6 +195,8 @@ const TaskItemStyled = styled.div`
   > h1 {
     font-size: 1.5rem;
     font-weight: 600;
+    background-color: #6762ce;
+    color: white;
   }
   p {
     text-wrap: wrap;
@@ -203,10 +210,16 @@ const TaskItemStyled = styled.div`
       border: none;
       outline: none;
       cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
 
       i {
         font-size: 1.4rem;
         color: ${(props) => props.theme.colorGrey2};
+        &:hover {
+          color: ${(props) => props.theme.colorBlack} !important;
+        }
       }
     }
 
@@ -231,6 +244,8 @@ const EditContent = styled.form`
   > h1 {
     font-size: clamp(1.2rem, 5vw, 1.6rem);
     font-weight: 600;
+    color: ${(props) => props.theme.colorBlack};
+    font-weight: 700;
   }
 
   color: ${(props) => props.theme.colorGrey1};
@@ -239,6 +254,7 @@ const EditContent = styled.form`
     position: relative;
     margin: 1rem 0;
     font-weight: 400;
+
     .error {
       color: red;
       font-size: 0.9rem;
@@ -253,6 +269,8 @@ const EditContent = styled.form`
       margin-bottom: 0.3rem;
       display: inline-block;
       font-size: clamp(0.9rem, 5vw, 1.2rem);
+      color: ${(props) => props.theme.colorBlack};
+      opacity: 0.8;
 
       span {
         color: ${(props) => props.theme.colorGrey3};
@@ -265,8 +283,8 @@ const EditContent = styled.form`
       padding: 0.6rem;
 
       resize: none;
-      background-color: ${(props) => props.theme.colorGreyDark};
-      color: ${(props) => props.theme.colorGrey2};
+      background-color: ${(props) => props.theme.colorGrey3};
+      color: ${(props) => props.theme.colorBlack};
       border-radius: 0.5rem;
     }
   }

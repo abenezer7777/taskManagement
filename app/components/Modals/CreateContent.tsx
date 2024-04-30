@@ -136,7 +136,7 @@ function CreateContent() {
           name="title"
           onChange={handleChange("title")}
           onBlur={handleBlur("title")}
-          placeholder="e.g, Watch a video from Fireship."
+          placeholder="e.g, Watch a video from Youtube"
         />
         {errors && errors.title && (
           <span className="error">{errors.title}</span>
@@ -206,7 +206,7 @@ function CreateContent() {
           borderRad={"0.8rem"}
           fw={"500"}
           fs={"1.2rem"}
-          background={"rgb(0, 163, 255)"}
+          background={"#5a55ca"}
         />
       </div>
     </CreateContentStyled>
@@ -215,10 +215,10 @@ function CreateContent() {
 const CreateContentStyled = styled.form`
   > h1 {
     font-size: clamp(1.2rem, 5vw, 1.6rem);
-    font-weight: 600;
+    font-weight: 700;
   }
 
-  color: ${(props) => props.theme.colorGrey1};
+  color: ${(props) => props.theme.colorBlack};
 
   .input-control {
     position: relative;
@@ -233,7 +233,7 @@ const CreateContentStyled = styled.form`
       margin-bottom: 0.1rem;
       display: inline-block;
       font-size: clamp(0.9rem, 5vw, 1.2rem);
-
+      opacity: 0.8;
       span {
         color: ${(props) => props.theme.colorGrey3};
       }
@@ -245,8 +245,8 @@ const CreateContentStyled = styled.form`
       padding: 0.2rem;
 
       resize: none;
-      background-color: ${(props) => props.theme.colorGreyDark};
-      color: ${(props) => props.theme.colorGrey2};
+      background-color: ${(props) => props.theme.colorGrey3};
+      color: ${(props) => props.theme.colorBlack};
       border-radius: 0.5rem;
     }
   }

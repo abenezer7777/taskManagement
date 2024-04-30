@@ -80,6 +80,9 @@ const TaskStyled = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
+    &:hover {
+      background-color: ${(props) => props.theme.colorGrey3};
+    }
 
     @media screen and (max-width: 768px) {
       top: 3rem;
@@ -121,7 +124,7 @@ const TaskStyled = styled.main`
     gap: 0.5rem;
 
     height: 16rem;
-    color: ${(props) => props.theme.colorGrey2};
+    color: ${(props) => props.theme.colorGrey3};
     font-weight: 600;
     cursor: pointer;
     border-radius: 1rem;
@@ -135,7 +138,7 @@ const TaskStyled = styled.main`
 
     &:hover {
       background-color: ${(props) => props.theme.colorGrey5};
-      color: ${(props) => props.theme.colorGrey0};
+      color: ${(props) => props.theme.colorGrey2};
     }
   }
 `;

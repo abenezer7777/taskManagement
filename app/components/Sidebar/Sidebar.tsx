@@ -67,16 +67,17 @@ function Sidebar() {
           );
         })}
       </ul>
-      <div className="sign-out relative m-6">
+      <div className="sign-out relative m-6 ">
         <Button
           name={"Sign Out"}
           type={"submit"}
           padding={"0.4rem 0.8rem"}
           borderRad={"0.8rem"}
-          fw={"500"}
+          fw={"600"}
           fs={"1.2rem"}
           icon={logout}
           click={handleSignOut}
+          color="#6c7983"
         />
       </div>
     </SidebarStyled>
@@ -119,10 +120,12 @@ const SidebarStyled = styled.nav<{ collapsed: boolean }>`
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 
-    background-color: ${(props) => props.theme.colorBg2};
+    background-color: ${(props) => props.theme.colorBg5};
     border-right: 2px solid ${(props) => props.theme.borderColor2};
     border-top: 2px solid ${(props) => props.theme.borderColor2};
     border-bottom: 2px solid ${(props) => props.theme.borderColor2};
+    color: white;
+    opacity: 0.8;
   }
 
   .user-btn {
@@ -145,7 +148,7 @@ const SidebarStyled = styled.nav<{ collapsed: boolean }>`
 
   .profile {
     margin: 1.5rem;
-    padding: 1rem 0.8rem;
+    padding: 1rem 0.5rem;
     position: relative;
 
     border-radius: 1rem;
@@ -166,10 +169,10 @@ const SidebarStyled = styled.nav<{ collapsed: boolean }>`
       height: 100%;
       backdrop-filter: blur(10px);
       z-index: 0;
-      background: ${(props) => props.theme.colorBg3};
+      background: ${(props) => props.theme.colorBg5};
       transition: all 0.55s linear;
       border-radius: 1rem;
-      border: 2px solid ${(props) => props.theme.borderColor2};
+      border: 2px solid ${(props) => props.theme.borderColor};
 
       opacity: 0.2;
     }
@@ -214,6 +217,7 @@ const SidebarStyled = styled.nav<{ collapsed: boolean }>`
       .profile-overlay {
         opacity: 1;
         border: 2px solid ${(props) => props.theme.borderColor2};
+        background-color: ${(props) => props.theme.colorGrey3};
       }
 
       img {
@@ -267,7 +271,8 @@ const SidebarStyled = styled.nav<{ collapsed: boolean }>`
     i {
       display: flex;
       align-items: center;
-      color: ${(props) => props.theme.colorIcons};
+      // color: ${(props) => props.theme.colorIcons};
+      color: gray;
     }
 
     &:hover {

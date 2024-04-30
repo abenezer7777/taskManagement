@@ -18,9 +18,17 @@
 
 body {
   font: size 17px;
-  color: #fff;
+  color: Black;
   height: 100vh;
-  background: linear-gradient(to bottom, #181818, #0b8fd7, #181818);
+  background: linear-gradient(
+    to bottom,
+    #5a55ca,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #5a55ca
+  );
 }
 
 input,

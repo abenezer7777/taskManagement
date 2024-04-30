@@ -61,12 +61,13 @@ const ButtonStyled = styled.button`
   color: ${(props) => props.theme.colorGrey2};
   z-index: 5;
   cursor: pointer;
+  
 
   transition: all 0.55s ease-in-out;
 
   i {
     margin-right: 1rem;
-    color: ${(props) => props.theme.colorGrey2};
+    color: ${(props) => props.theme.colorGrey3};
     font-size: 1.5rem;
     transition: al/l 0.55s ease-in-out;
   }
