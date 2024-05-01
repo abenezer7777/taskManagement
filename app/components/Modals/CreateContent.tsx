@@ -233,10 +233,7 @@ const CreateContentStyled = styled.form`
       margin-bottom: 0.1rem;
       display: inline-block;
       font-size: clamp(0.9rem, 5vw, 1.2rem);
-      opacity: 0.8;
-      span {
-        color: ${(props) => props.theme.colorGrey3};
-      }
+      color: ${(props) => props.theme.colorGrey3};
     }
 
     input,
@@ -245,7 +242,7 @@ const CreateContentStyled = styled.form`
       padding: 0.2rem;
 
       resize: none;
-      background-color: ${(props) => props.theme.colorGrey3};
+      background-color: ${(props) => props.theme.colorGrey1};
       color: ${(props) => props.theme.colorBlack};
       border-radius: 0.5rem;
     }

@@ -269,8 +269,7 @@ const EditContent = styled.form`
       margin-bottom: 0.3rem;
       display: inline-block;
       font-size: clamp(0.9rem, 5vw, 1.2rem);
-      color: ${(props) => props.theme.colorBlack};
-      opacity: 0.8;
+      color: ${(props) => props.theme.colorGrey3};
 
       span {
         color: ${(props) => props.theme.colorGrey3};
@@ -283,7 +282,7 @@ const EditContent = styled.form`
       padding: 0.6rem;
 
       resize: none;
-      background-color: ${(props) => props.theme.colorGrey3};
+      background-color: ${(props) => props.theme.colorGrey1};
       color: ${(props) => props.theme.colorBlack};
       border-radius: 0.5rem;
     }
